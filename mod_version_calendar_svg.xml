@@ -7,7 +7,7 @@
 	<authorUrl>http://www.joomla.org</authorUrl>
 	<copyright>(C) 2020 Open Source Matters, Inc.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<description>MOD_VERSION_CALENDAR_SVG_XML_DESCRIPTION</description>
 
 	<!-- Scripts to run on installation -->
@@ -128,7 +128,7 @@
 		<field
 			type="color"
 			name="text_color"
-			default="#333"
+			default="#ffffff"
 			label="MOD_VERSION_CALENDAR_SVG_TEXT_COLOR_LABEL"
 			required="true"
 		/>
@@ -136,7 +136,7 @@
 		<field
 			type="color"
 			name="future_color"
-			default="#000"
+			default="#5091cd"
 			label="MOD_VERSION_CALENDAR_SVG_FUTURE_COLOR_LABEL"
 			required="true"
 		/>
@@ -144,7 +144,7 @@
 		<field
 			type="color"
 			name="stable_color"
-			default="#9c9"
+			default="#7ac143"
 			label="MOD_VERSION_CALENDAR_SVG_STABLE_COLOR_LABEL"
 			required="true"
 		/>
@@ -152,7 +152,7 @@
 		<field
 			type="color"
 			name="security_color"
-			default="#f93"
+			default="#f9a541"
 			label="MOD_VERSION_CALENDAR_SVG_SECURITY_COLOR_LABEL"
 			required="true"
 		/>
@@ -160,7 +160,7 @@
 		<field
 			type="color"
 			name="end_of_life_color"
-			default="#f33"
+			default="#f44321"
 			label="MOD_VERSION_CALENDAR_SVG_END_OF_LIFE_COLOR_LABEL"
 			required="true"
 		/>
@@ -168,7 +168,7 @@
 		<field
 			type="color"
 			name="end_of_life_text_color"
-			default="#fff"
+			default="#ffffff"
 			label="MOD_VERSION_CALENDAR_SVG_END_OF_LIFE_TEXT_COLOR_LABEL"
 			required="true"
 		/>
@@ -176,7 +176,7 @@
 		<field
 			type="color"
 			name="years_line_color"
-			default="#000"
+			default="#5091cd"
 			label="MOD_VERSION_CALENDAR_SVG_YEARS_LINE_COLOR_LABEL"
 			required="true"
 		/>
@@ -192,7 +192,7 @@
 		<field
 			type="color"
 			name="today_line_color"
-			default="#f33"
+			default="#f44321"
 			label="MOD_VERSION_CALENDAR_SVG_TODAY_LINE_COLOR_LABEL"
 			required="true"
 		/>
@@ -200,7 +200,7 @@
 		<field
 			type="color"
 			name="today_text_color"
-			default="#f33"
+			default="#f44321"
 			label="MOD_VERSION_CALENDAR_SVG_TODAY_TEXT_COLOR_LABEL"
 			required="true"
 		/>
