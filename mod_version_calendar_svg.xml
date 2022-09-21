@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="4" client="site" method="upgrade">
+	<name>MOD_VERSION_CALENDAR_SVG</name>
+	<creationDate>21st September, 2022</creationDate>
+	<author>Joomla! Project</author>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>http://www.joomla.org</authorUrl>
+	<copyright>(C) 2020 Open Source Matters, Inc.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0.0</version>
+	<description>MOD_VERSION_CALENDAR_SVG_XML_DESCRIPTION</description>
+
+	<!-- Scripts to run on installation -->
+	<scriptfile>script.php</scriptfile>
+
+	<!-- Language files -->
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_version_calendar_svg.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_version_calendar_svg.sys.ini</language>
+	</languages>
+
+	<!-- Model files -->
+	<files>
+		<filename module="mod_version_calendar_svg">mod_version_calendar_svg.php</filename>
+		<filename>LICENSE.txt</filename>
+		<filename>README.md</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>fields</folder>
+		<folder>rules</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<!-- Config parameter -->
+	<config>
+	<fields name="params">
+	<!-- default paths of dimention fieldset points to the module -->
+	<fieldset name="dimention" label="MOD_VERSION_CALENDAR_SVG_DIMENTIONS"
+		addrulepath="/modules/mod_version_calendar_svg/rules"
+		addfieldpath="/modules/mod_version_calendar_svg/fields"
+	>
+		<!-- Header_height Field. Type: Number. (joomla) -->
+		<field
+			type="number"
+			name="header_height"
+			label="MOD_VERSION_CALENDAR_SVG_HEADER_HEIGHT_LABEL"
+			default="24"
+			class="text_area"
+			required="true"
+			min="10"
+			max="80"
+			step="1"
+			validate="int"
+		/>
+		<!-- Branch_height Field. Type: Number. (joomla) -->
+		<field
+			type="number"
+			name="branch_height"
+			label="MOD_VERSION_CALENDAR_SVG_BRANCH_HEIGHT_LABEL"
+			default="30"
+			class="text_area"
+			required="true"
+			min="20"
+			max="100"
+			step="5"
+			validate="int"
+		/>
+		<!-- Margin_right Field. Type: Number. (joomla) -->
+		<field
+			type="number"
+			name="margin_right"
+			label="MOD_VERSION_CALENDAR_SVG_MARGIN_RIGHT_LABEL"
+			default="50"
+			class="text_area"
+			required="true"
+			min="20"
+			max="100"
+			step="5"
+			validate="int"
+		/>
+		<!-- Margin_left Field. Type: Number. (joomla) -->
+		<field
+			type="number"
+			name="margin_left"
+			label="MOD_VERSION_CALENDAR_SVG_MARGIN_LEFT_LABEL"
+			default="80"
+			class="text_area"
+			required="true"
+			min="40"
+			max="140"
+			step="5"
+			validate="int"
+		/>
+		<!-- Year_width Field. Type: Number. (joomla) -->
+		<field
+			type="number"
+			name="year_width"
+			label="MOD_VERSION_CALENDAR_SVG_YEAR_WIDTH_LABEL"
+			default="120"
+			class="text_area"
+			required="true"
+			min="50"
+			max="300"
+			step="5"
+			validate="int"
+		/>
+		<!-- Footer_height Field. Type: Number. (joomla) -->
+		<field
+			type="number"
+			name="footer_height"
+			label="MOD_VERSION_CALENDAR_SVG_FOOTER_HEIGHT_LABEL"
+			default="24"
+			class="text_area"
+			required="true"
+			min="10"
+			max="80"
+			step="1"
+			validate="int"
+		/>
+	</fieldset>
+	<!-- default paths of style fieldset points to the module -->
+	<fieldset name="style" label="MOD_VERSION_CALENDAR_SVG_STYLES"
+		addrulepath="/modules/mod_version_calendar_svg/rules"
+		addfieldpath="/modules/mod_version_calendar_svg/fields"
+	>
+		<!-- Text_color Field. Type: Color. (joomla) -->
+		<field
+			type="color"
+			name="text_color"
+			default="#333"
+			label="MOD_VERSION_CALENDAR_SVG_TEXT_COLOR_LABEL"
+			required="true"
+		/>
+		<!-- Future_color Field. Type: Color. (joomla) -->
+		<field
+			type="color"
+			name="future_color"
+			default="#000"
+			label="MOD_VERSION_CALENDAR_SVG_FUTURE_COLOR_LABEL"
+			required="true"
+		/>
+		<!-- Stable_color Field. Type: Color. (joomla) -->
+		<field
+			type="color"
+			name="stable_color"
+			default="#9c9"
+			label="MOD_VERSION_CALENDAR_SVG_STABLE_COLOR_LABEL"
+			required="true"
+		/>
+		<!-- Security_color Field. Type: Color. (joomla) -->
+		<field
+			type="color"
+			name="security_color"
+			default="#f93"
+			label="MOD_VERSION_CALENDAR_SVG_SECURITY_COLOR_LABEL"
+			required="true"
+		/>
+		<!-- End_of_life_color Field. Type: Color. (joomla) -->
+		<field
+			type="color"
+			name="end_of_life_color"
+			default="#f33"
+			label="MOD_VERSION_CALENDAR_SVG_END_OF_LIFE_COLOR_LABEL"
+			required="true"
+		/>
+		<!-- End_of_life_text_color Field. Type: Color. (joomla) -->
+		<field
+			type="color"
+			name="end_of_life_text_color"
+			default="#fff"
+			label="MOD_VERSION_CALENDAR_SVG_END_OF_LIFE_TEXT_COLOR_LABEL"
+			required="true"
+		/>
+		<!-- Years_line_color Field. Type: Color. (joomla) -->
+		<field
+			type="color"
+			name="years_line_color"
+			default="#000"
+			label="MOD_VERSION_CALENDAR_SVG_YEARS_LINE_COLOR_LABEL"
+			required="true"
+		/>
+		<!-- Years_text_color Field. Type: Color. (joomla) -->
+		<field
+			type="color"
+			name="years_text_color"
+			default="#000"
+			label="MOD_VERSION_CALENDAR_SVG_YEARS_TEXT_COLOR_LABEL"
+			required="true"
+		/>
+		<!-- Today_line_color Field. Type: Color. (joomla) -->
+		<field
+			type="color"
+			name="today_line_color"
+			default="#f33"
+			label="MOD_VERSION_CALENDAR_SVG_TODAY_LINE_COLOR_LABEL"
+			required="true"
+		/>
+		<!-- Today_text_color Field. Type: Color. (joomla) -->
+		<field
+			type="color"
+			name="today_text_color"
+			default="#f33"
+			label="MOD_VERSION_CALENDAR_SVG_TODAY_TEXT_COLOR_LABEL"
+			required="true"
+		/>
+	</fieldset>
+	<!-- default paths of dates fieldset points to the module -->
+	<fieldset name="dates" label="MOD_VERSION_CALENDAR_SVG_DATES"
+		addrulepath="/modules/mod_version_calendar_svg/rules"
+		addfieldpath="/modules/mod_version_calendar_svg/fields"
+	>
+		<!-- Max_years Field. Type: Number. (joomla) -->
+		<field
+			type="number"
+			name="max_years"
+			label="MOD_VERSION_CALENDAR_SVG_MAX_YEARS_LABEL"
+			default="5"
+			class="text_area"
+			required="true"
+			min="1"
+			max="20"
+			step="1"
+			validate="int"
+		/>
+		<!-- Min_years Field. Type: Number. (joomla) -->
+		<field
+			type="number"
+			name="min_years"
+			label="MOD_VERSION_CALENDAR_SVG_MIN_YEARS_LABEL"
+			default="3"
+			class="text_area"
+			required="true"
+			min="1"
+			max="10"
+			step="1"
+			validate="int"
+		/>
+		<!-- Dates Field. Type: Subform. (joomla) -->
+		<field
+			type="subform"
+			name="dates"
+			label="MOD_VERSION_CALENDAR_SVG_DATES_LABEL"
+			layout="joomla.form.field.subform.repeatable"
+			multiple="true"
+			buttons="add,remove,move"
+			icon="list"
+			max="50"
+			min="1">
+			<form hidden="true" name="list_dates_modal" repeat="true">
+				<!-- Version Field. Type: Text. (joomla) -->
+				<field
+					type="text"
+					name="version"
+					label="MOD_VERSION_CALENDAR_SVG_VERSION_LABEL"
+					size="40"
+					maxlength="50"
+					default="1.0.0"
+					description="MOD_VERSION_CALENDAR_SVG_VERSION_DESCRIPTION"
+					class="text_area"
+					required="true"
+					filter="CMD"
+					message="MOD_VERSION_CALENDAR_SVG_VERSION_MESSAGE"
+					hint="MOD_VERSION_CALENDAR_SVG_VERSION_HINT"
+				/>
+				<!-- Start Field. Type: Calendar. (joomla) -->
+				<field
+					type="calendar"
+					name="start"
+					label="MOD_VERSION_CALENDAR_SVG_START_LABEL"
+					format="%d-%m-%Y"
+					filter="CMD"
+					message="MOD_VERSION_CALENDAR_SVG_START_MESSAGE"
+					size="40"
+					required="true"
+				/>
+				<!-- Bug Field. Type: Calendar. (joomla) -->
+				<field
+					type="calendar"
+					name="bug"
+					label="MOD_VERSION_CALENDAR_SVG_BUG_LABEL"
+					format="%d-%m-%Y"
+					filter="CMD"
+					message="MOD_VERSION_CALENDAR_SVG_BUG_MESSAGE"
+					size="40"
+					required="true"
+				/>
+				<!-- End Field. Type: Calendar. (joomla) -->
+				<field
+					type="calendar"
+					name="end"
+					label="MOD_VERSION_CALENDAR_SVG_END_LABEL"
+					format="%d-%m-%Y"
+					filter="CMD"
+					message="MOD_VERSION_CALENDAR_SVG_END_MESSAGE"
+					size="40"
+					required="true"
+				/>
+			</form>
+		</field>
+	</fieldset>
+	</fields>
+	</config>
+</extension>
