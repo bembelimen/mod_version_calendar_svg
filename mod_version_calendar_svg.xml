@@ -10,25 +10,13 @@
 	<version>1.0.1</version>
 	<description>MOD_VERSION_CALENDAR_SVG_XML_DESCRIPTION</description>
 
-	<!-- Scripts to run on installation -->
-	<scriptfile>script.php</scriptfile>
-
-	<!-- Language files -->
-	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.mod_version_calendar_svg.ini</language>
-		<language tag="en-GB">en-GB/en-GB.mod_version_calendar_svg.sys.ini</language>
-	</languages>
-
 	<!-- Model files -->
 	<files>
 		<filename module="mod_version_calendar_svg">mod_version_calendar_svg.php</filename>
 		<filename>LICENSE.txt</filename>
 		<filename>README.md</filename>
 		<filename>helper.php</filename>
-		<filename>index.html</filename>
 		<folder>language</folder>
-		<folder>fields</folder>
-		<folder>rules</folder>
 		<folder>tmpl</folder>
 	</files>
 
@@ -36,10 +24,7 @@
 	<config>
 	<fields name="params">
 	<!-- default paths of dimention fieldset points to the module -->
-	<fieldset name="dimention" label="MOD_VERSION_CALENDAR_SVG_DIMENTIONS"
-		addrulepath="/modules/mod_version_calendar_svg/rules"
-		addfieldpath="/modules/mod_version_calendar_svg/fields"
-	>
+	<fieldset name="dimension" label="MOD_VERSION_CALENDAR_SVG_DIMENSIONS">
 		<!-- Header_height Field. Type: Number. (joomla) -->
 		<field
 			type="number"
@@ -51,7 +36,7 @@
 			min="10"
 			max="80"
 			step="1"
-			validate="int"
+			validate="number"
 		/>
 		<!-- Branch_height Field. Type: Number. (joomla) -->
 		<field
@@ -64,7 +49,7 @@
 			min="20"
 			max="100"
 			step="5"
-			validate="int"
+			validate="number"
 		/>
 		<!-- Margin_right Field. Type: Number. (joomla) -->
 		<field
@@ -77,7 +62,7 @@
 			min="20"
 			max="100"
 			step="5"
-			validate="int"
+			validate="number"
 		/>
 		<!-- Margin_left Field. Type: Number. (joomla) -->
 		<field
@@ -90,7 +75,7 @@
 			min="40"
 			max="140"
 			step="5"
-			validate="int"
+			validate="number"
 		/>
 		<!-- Year_width Field. Type: Number. (joomla) -->
 		<field
@@ -103,7 +88,7 @@
 			min="50"
 			max="300"
 			step="5"
-			validate="int"
+			validate="number"
 		/>
 		<!-- Footer_height Field. Type: Number. (joomla) -->
 		<field
@@ -116,14 +101,11 @@
 			min="10"
 			max="80"
 			step="1"
-			validate="int"
+			validate="number"
 		/>
 	</fieldset>
 	<!-- default paths of style fieldset points to the module -->
-	<fieldset name="style" label="MOD_VERSION_CALENDAR_SVG_STYLES"
-		addrulepath="/modules/mod_version_calendar_svg/rules"
-		addfieldpath="/modules/mod_version_calendar_svg/fields"
-	>
+	<fieldset name="style" label="MOD_VERSION_CALENDAR_SVG_STYLES">
 		<!-- Text_color Field. Type: Color. (joomla) -->
 		<field
 			type="color"
@@ -206,10 +188,7 @@
 		/>
 	</fieldset>
 	<!-- default paths of dates fieldset points to the module -->
-	<fieldset name="dates" label="MOD_VERSION_CALENDAR_SVG_DATES"
-		addrulepath="/modules/mod_version_calendar_svg/rules"
-		addfieldpath="/modules/mod_version_calendar_svg/fields"
-	>
+	<fieldset name="dates" label="MOD_VERSION_CALENDAR_SVG_DATES">
 		<!-- Max_years Field. Type: Number. (joomla) -->
 		<field
 			type="number"
@@ -221,7 +200,7 @@
 			min="1"
 			max="20"
 			step="1"
-			validate="int"
+			validate="number"
 		/>
 		<!-- Min_years Field. Type: Number. (joomla) -->
 		<field
@@ -234,7 +213,7 @@
 			min="1"
 			max="10"
 			step="1"
-			validate="int"
+			validate="number"
 		/>
 		<!-- Dates Field. Type: Subform. (joomla) -->
 		<field

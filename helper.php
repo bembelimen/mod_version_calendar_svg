@@ -148,7 +148,7 @@ class ModVersion_Calendar_svgHelper
 
 				$i = 0;
 
-				foreach ($branches as $k => &$branch)
+				foreach ($branches as $branch)
 				{
 					$branch->top = $header_height + ($branch_height * $i++);
 				}
